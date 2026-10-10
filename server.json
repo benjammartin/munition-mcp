@@ -1,0 +1,39 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.benjammartin/munition",
+  "title": "Munition",
+  "description": "Web search, page reading, HTML to PDF, file upload and flight search for AI agents, paid in USDC.",
+  "version": "0.0.16",
+  "websiteUrl": "https://munition.io",
+  "repository": {
+    "url": "https://github.com/benjammartin/munitionx402",
+    "source": "github",
+    "subfolder": "packages/mcp"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@munition/mcp",
+      "version": "0.0.16",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "MUNITION_API_URL",
+          "description": "Production Munition API origin.",
+          "value": "https://api.munition.io",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        }
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.munition.io/mcp"
+    }
+  ]
+}

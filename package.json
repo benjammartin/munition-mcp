@@ -1,0 +1,54 @@
+{
+  "name": "@munition/mcp",
+  "version": "0.0.16",
+  "mcpName": "io.github.benjammartin/munition",
+  "description": "MCP server for Munition x402-paid agent services",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "homepage": "https://munition.io",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjammartin/munition-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/benjammartin/munition-mcp/issues"
+  },
+  "bin": {
+    "munition": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "server.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "mcp",
+    "file-hosting",
+    "paid-tools",
+    "ai-agents",
+    "claude",
+    "model-context-protocol",
+    "munition"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "vitest": "^2.1.8",
+    "typescript": "^5.7.3",
+    "@types/node": "^22.13.4"
+  }
+}
